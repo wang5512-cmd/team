@@ -1,4 +1,4 @@
-# project
+# s-store-app
 
 ## Project setup
 ```
