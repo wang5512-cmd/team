@@ -3,7 +3,7 @@
   <div class="reg">
     <img
       class="regImag"
-      src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=322140852,579548040&fm=26&gp=0.jpg"
+      src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2707690916,1529169818&fm=26&gp=0.jpg"
       alt=""
     />
     <van-form @submit="onSubmit">
@@ -88,7 +88,6 @@ export default {
   justify-content: center;
 }
 .regImag {
-  width: 60%;
-  height: 60%;
+  height: 40%;
 }
 </style>

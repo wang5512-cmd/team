@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-field name="uploader" label="我的头像">
+    <van-field name="uploader" label="个人中心">
       <template #input>
         <van-uploader v-model="uploader" />
       </template>

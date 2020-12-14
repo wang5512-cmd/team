@@ -2,8 +2,8 @@
   <!-- 登录 -->
   <div class="reg">
     <img
-      style="width:60%;"
-      src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=248007035,51823783&fm=26&gp=0.jpg"
+      style="width:40%;"
+      src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2707690916,1529169818&fm=26&gp=0.jpg"
       alt=""
     />
     <van-form @submit="onSubmit">
@@ -67,6 +67,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   justify-content: center;
 }
 </style>
