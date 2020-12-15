@@ -2,9 +2,14 @@ import Vue from "vue";
 import Vant from "vant";
 import "vant/lib/index.css"; // 引入css文件
 import "nprogress/nprogress.css";
+
 import App from "./App.vue";
 import router from "./router";
 import { serverUrl } from "@/utils/tools";
+import { AddressList } from "vant";
+Vue.use(AddressList);
+import { AddressEdit } from "vant";
+Vue.use(AddressEdit);
 
 Vue.filter("dalImg", (val) => {
   if (val) {
