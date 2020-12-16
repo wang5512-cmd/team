@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+	  <!-- 哈哈 -->
     <div>
       <van-search
         shape="round"
