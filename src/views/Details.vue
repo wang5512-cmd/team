@@ -1,5 +1,6 @@
 <template>
   <div class="details">
+    <van-nav-bar title="商品详情" left-arrow @click-left="$router.back()" />
     <div class="content">
       <img :src="ccc.coverImg" alt="" class="b" />
       <p>{{ ccc.name }}</p>
@@ -16,6 +17,7 @@
         <span class="block">{{ timeData.seconds }}</span>
       </template>
     </van-count-down>
+    <div v-html="ccc.content" id="tu"></div>
   </div>
 </template>
 
@@ -91,5 +93,8 @@ export default {
 }
 .header {
   height: 40px;
+}
+#tu >>> img {
+  width: 100%;
 }
 </style>

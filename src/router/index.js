@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import { isLogined } from "@/utils/tools";
 import Home from "../views/Home.vue";
-
+// import axios from "axios";
 Vue.use(VueRouter);
 
 const routes = [
@@ -62,6 +62,11 @@ const routes = [
     path: "/areaList",
     name: "AreaList",
     component: () => import("../views/AreaList.vue"),
+  },
+  {
+    path: "/search",
+    name: "Search",
+    component: () => import("../views/Search.vue"),
   },
 ];
 

@@ -51,7 +51,9 @@
       <van-grid-item icon="star-o" text="文字" />
       <van-grid-item icon-prefix="toutiao" icon="lishi" text="文字" />
     </van-grid>
-    <van-button block type="danger" @click="handleDelete">退出登录</van-button>
+    <van-button class="tuichu" block type="danger" @click="handleDelete"
+      >退出登录</van-button
+    >
   </div>
 </template>
 
@@ -79,4 +81,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.User content .tuichu {
+  height: 60%;
+}
+</style>

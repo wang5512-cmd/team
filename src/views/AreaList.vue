@@ -1,10 +1,14 @@
 <template>
   <div class="add-new-address">
     <header>
+      <van-nav-bar
+        title="新增收货地址"
+        left-arrow
+        @click-left="$router.back()"
+      />
       <span class="toProfile" @click="toProfile">
         <i class="el-icon-arrow-left"></i>
       </span>
-      <h3>新增收货地址</h3>
     </header>
     <main>
       <van-address-edit

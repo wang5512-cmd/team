@@ -6,3 +6,7 @@ import { get } from "@/utils/request";
 export function allCategories() {
   return get("/api/v1/product_categories");
 }
+
+export function allAPI() {
+  return get("/api/v1/products");
+}

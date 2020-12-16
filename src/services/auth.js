@@ -7,7 +7,9 @@ export function regAPI(user) {
 export function loginAPI(user) {
   return post("/api/v1/auth/login", user);
 }
-
+export function loadPro(page) {
+  return get("/api/v1/products?page=" + page);
+}
 /**
  * 获取用户信息
  */

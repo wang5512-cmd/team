@@ -2,15 +2,34 @@ import Vue from "vue";
 import Vant from "vant";
 import "vant/lib/index.css"; // 引入css文件
 import "nprogress/nprogress.css";
-
+import ElementUI from "element-ui";
+import "element-ui/lib/theme-chalk/index.css";
 import App from "./App.vue";
 import router from "./router";
 import { serverUrl } from "@/utils/tools";
 import { AddressList } from "vant";
-Vue.use(AddressList);
 import { AddressEdit } from "vant";
-Vue.use(AddressEdit);
+import { NavBar } from "vant";
+import { Dialog } from "vant";
+import { Area } from "vant";
+import { Tab, Tabs } from "vant";
+import { SubmitBar } from "vant";
+import { Card } from "vant";
+import { Search } from "vant";
 
+Vue.use(Search);
+Vue.use(Card);
+Vue.use(SubmitBar);
+
+Vue.use(Vant);
+Vue.use(Tab);
+Vue.use(Tabs);
+Vue.use(Dialog);
+Vue.use(Area);
+Vue.use(NavBar);
+Vue.use(ElementUI);
+Vue.use(AddressEdit);
+Vue.use(AddressList);
 Vue.filter("dalImg", (val) => {
   if (val) {
     if (val.startsWith("http")) {
