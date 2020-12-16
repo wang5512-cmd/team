@@ -2,9 +2,7 @@
   <div class="add-new-address">
     <header>
       <van-nav-bar title="收货地址" left-arrow @click-left="$router.back()" />
-      <span class="toProfile" @click="toProfile">
-        <i class="el-icon-arrow-left"></i>
-      </span>
+      <span class="toProfile" @click="toProfile"> </span>
     </header>
     <main>
       <van-address-list
