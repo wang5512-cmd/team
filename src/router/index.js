@@ -55,7 +55,7 @@ const routes = [
   },
   {
     path: "/addressEdit",
-    name: "AddressEdit",
+    name: "Usermenu",
     component: () => import("../views/AddressEdit.vue"),
   },
   {

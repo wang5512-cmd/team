@@ -5,13 +5,25 @@
       <div class="item" v-for="item in carts" :key="item._id">
         <van-checkbox style="width: 1.5rem" v-model="item.checked">
         </van-checkbox>
+        <!-- <van-card
+          style="flex: 1"
+          :num="item.quantity"
+          :price="(item.product.price / 100).toFixed(2)"
+          :title="item.product.name"
+          :thumb="item.product.coverImg | dalImg"
+        /> -->
         <van-card
           style="flex: 1"
           :num="item.quantity"
           :price="(item.product.price / 100).toFixed(2)"
           :title="item.product.name"
           :thumb="item.product.coverImg | dalImg"
-        />
+        >
+          <template #footer>
+            <van-button size="mini" @click="jian(item)">-</van-button>
+            <van-button size="mini" @click="jia(item)">+</van-button>
+          </template>
+        </van-card>
       </div>
     </div>
     <van-submit-bar :price="sumPrice" button-text="提交订单" @submit="onSubmit">
@@ -25,7 +37,9 @@
 </template>
 
 <script>
-import { loadCartsAPI } from "@/services/carts";
+import { loadCartsAPI, addCartAPI } from "@/services/carts";
+// import { Toast } from "vant";
+
 export default {
   name: "Cart",
   data() {
@@ -50,14 +64,29 @@ export default {
         .reduce((pre, cur) => pre + cur.product.price * cur.quantity, 0);
     },
   },
-  async created() {
-    const res = await loadCartsAPI();
-    // console.log(res);
-    this.carts = res.map((item) => ({ ...item, checked: false }));
-    console.log(this.carts);
+  created() {
+    // const res = await loadCartsAPI();
+    // // console.log(res);
+    // this.carts = res.map((item) => ({ ...item, checked: false }));
+    // console.log(this.carts);
+    this.loadlista();
   },
   methods: {
     onSubmit() {},
+    async jian(item) {
+      await addCartAPI(item.product._id, -1);
+      this.loadlista();
+    },
+    async jia(item) {
+      await addCartAPI(item.product._id, 1);
+      this.loadlista();
+    },
+    async loadlista() {
+      const res = await loadCartsAPI();
+      // console.log(res);
+      this.carts = res.map((item) => ({ ...item, checked: false }));
+      console.log(this.carts);
+    },
   },
 };
 </script>

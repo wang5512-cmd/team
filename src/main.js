@@ -16,7 +16,11 @@ import { Tab, Tabs } from "vant";
 import { SubmitBar } from "vant";
 import { Card } from "vant";
 import { Search } from "vant";
+import { GoodsAction, GoodsActionIcon, GoodsActionButton } from "vant";
 
+Vue.use(GoodsAction);
+Vue.use(GoodsActionButton);
+Vue.use(GoodsActionIcon);
 Vue.use(Search);
 Vue.use(Card);
 Vue.use(SubmitBar);
