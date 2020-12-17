@@ -1,7 +1,7 @@
 <template>
   <div class="details">
     <van-nav-bar title="商品详情" left-arrow @click-left="$router.back()" />
-    <van-goods-action safe-area-inset-bottom="false" id="gou">
+    <van-goods-action id="gou">
       <van-goods-action-icon icon="chat-o" text="客服" color="#ee0a24" />
       <van-goods-action-icon icon="cart-o" text="购物车" />
       <van-goods-action-icon icon="star" text="已收藏" color="#ff5000" />

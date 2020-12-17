@@ -118,11 +118,20 @@
           </div>
         </div>
       </div>
+      <van-button
+        class="tuichu"
+        block
+        type="danger"
+        color="linear-gradient(to right, #fd9026, #ff5101)"
+        @click="handleDelete"
+        >退出登录</van-button
+      >
     </van-pull-refresh>
   </div>
 </template>
 
 <script>
+import { removeToken } from "../utils/tools";
 import { getUser, updateUser } from "../services/user";
 import { Toast } from "vant";
 
@@ -177,6 +186,10 @@ export default {
   },
 
   methods: {
+    handleDelete() {
+      removeToken();
+      this.$router.push("/login");
+    },
     async get() {
       this.mes = await getUser();
       this.txt = this.mes.nickName;
@@ -237,7 +250,7 @@ a {
 }
 .piccon {
   /* width: 60%; */
-  height: 190px;
+  height: 180px;
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
@@ -329,7 +342,7 @@ a {
   color: #999;
 }
 .carbody {
-  height: 90px;
+  height: 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;

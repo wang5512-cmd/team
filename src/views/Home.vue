@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-	  <!-- 哈哈 -->
     <div>
       <van-search
         shape="round"
@@ -15,6 +14,10 @@
         <img :src="item" alt="" />
       </van-swipe-item>
     </van-swipe>
+    <van-notice-bar
+      left-icon="volume-o"
+      text="感恩回馈圣诞活动开始啦！全场5折快快抢购吧！！！。"
+    />
     <van-grid :column-num="3">
       <van-grid-item
         v-for="value in categories"
@@ -146,6 +149,7 @@ export default {
   margin: 10px;
   background: white;
   border-radius: 10px;
+  list-style: none;
 }
 .ul li a {
   display: flex;

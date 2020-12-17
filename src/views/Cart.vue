@@ -38,7 +38,7 @@
 
 <script>
 import { loadCartsAPI, addCartAPI } from "@/services/carts";
-// import { Toast } from "vant";
+import { Notify } from "vant";
 
 export default {
   name: "Cart",
@@ -74,8 +74,12 @@ export default {
   methods: {
     onSubmit() {},
     async jian(item) {
-      await addCartAPI(item.product._id, -1);
-      this.loadlista();
+      if (item.quantity <= 1) {
+        Notify("商品数量不能少于1");
+      } else {
+        await addCartAPI(item.product._id, -1);
+        this.loadlista();
+      }
     },
     async jia(item) {
       await addCartAPI(item.product._id, 1);
