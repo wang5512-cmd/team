@@ -72,9 +72,9 @@
         <div class="mainbody1">
           <p class="cardtop">
             <span class="jiachu">我的订单</span>
-            <router-link :to="{ name: 'List', query: { id: mes._id } }">
-              <span>查看全部订单<i class="el-icon-arrow-right"> </i></span>
-            </router-link>
+            <!-- <router-link :to="{ name: 'List', query: { id: mes._id } }"> -->
+            <span>查看全部订单<i class="el-icon-arrow-right"> </i></span>
+            <!-- </router-link> -->
           </p>
           <ul class="carbody">
             <li>

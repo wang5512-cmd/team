@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div class="header">
-      <van-nav-bar title="列表页" left-arrow @click-left="$router.back()" />
+      <van-nav-bar title="商品列表" left-arrow @click-left="$router.back()" />
     </div>
     <div class="content">
       <van-list
