@@ -16,7 +16,7 @@
         :num="item.quantity"
         :price="item.price"
         :title="item.name"
-        :thumb="item.coverImg"
+        :thumb="item.coverImg | dalImg"
         @click="xiangqing(item._id)"
       />
     </div>

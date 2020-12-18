@@ -22,7 +22,7 @@
       <van-grid-item
         v-for="value in categories"
         :key="value._id"
-        :icon="value.coverImg"
+        :icon="value.coverImg | dalImg"
         :text="value.name"
         :to="{ name: 'Hot', query: { c: value._id } }"
       />
@@ -38,7 +38,7 @@
     >
       <li v-for="item in list" :key="item._id">
         <router-link :to="{ name: 'Details', query: { a: item._id } }"
-          ><img :src="item.coverImg" alt="" />
+          ><img :src="item.coverImg | dalImg" alt="" />
           <p class="pro-name">{{ item.name }}</p>
           <div class="pro-footer">
             <span class="pro-price">
